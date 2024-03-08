@@ -1,0 +1,423 @@
+body {
+  position: relative;
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url('/img/3273d78fa1db7559a8b9c3afb297affc.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 30px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #fff;
+}
+
+/* =================POPUP================ */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* изменено на выравнивание по центру */
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+
+.popup {
+  background-color: palevioletred;
+  padding: 40px;
+  border-radius: 10%;
+  text-align: center;
+  transform: translateY(-100%);
+  /* начальное положение за экраном */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  font-size: 24px;
+}
+
+.popup.show {
+  transform: translateY(0);
+  /* окончательное положение в центре экрана */
+  opacity: 1;
+}
+
+.overlay.active {
+  opacity: 1;
+}
+
+.aa {
+  font-size: 30px;
+  margin-top: 10%;
+  background-color: pink;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.4s;
+}
+
+.aa:hover {
+  background-color: rgb(175, 111, 175);
+  transition: all 0.4s;
+}
+
+.popimg {
+  max-width: 500px;
+  margin: 5%;
+}
+
+.xyi2 {
+  background-color: #00bbff;
+}
+
+.aa2 {
+  background-color: purple;
+}
+
+.xyi3 {
+  background-color: #aa00ff;
+}
+
+.aa3 {
+  background-color: rgb(35, 133, 224);
+}
+
+.xyi4 {
+  background-color: red;
+}
+
+.wwww {
+  color: white;
+  font-size: 28px;
+}
+
+.aa4 {
+  background-color: antiquewhite;
+}
+
+/* =================HEADER===================== */
+header {
+  border-bottom: 5px rgb(163, 40, 163) solid;
+  background-color: #faf1f1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header__img {
+  max-width: 150px;
+}
+
+.header__nav-list ul {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+}
+
+
+/* =================INTRO========================= */
+
+.intro__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro__heading h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-top: 100px;
+}
+
+.intro__heading p {
+  font-size: 30px;
+}
+
+.intro__img {
+  margin-left: 50px;
+  padding-bottom: 80px;
+}
+
+/* =================tykras============== */
+
+
+.tykras__heading {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.tykras__img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tykras__img img {
+  border-radius: 10%;
+  border: 5px solid purple;
+  max-width: 80%;
+}
+
+.tykras__img2 img {
+  border-radius: 10%;
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tykras__icant {
+  text-align: center;
+  font-size: clamp(16px, 5vw, 50px);
+  margin-bottom: 40px;
+}
+
+/* =================PERVI================= */
+
+.pervi {
+  padding-bottom: 80px;
+}
+
+.pervih {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.pervi__block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  font-size: 30px;
+}
+
+.pervi__block img {
+  max-width: 40%;
+}
+
+.pervi__still {
+  font-size: 35px;
+  padding-bottom: 80px;
+}
+
+/* ==========GALLERY===================== */
+
+.gallery {
+  padding-bottom: 80px;
+}
+
+.gallery__heading {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  padding-top: 100px;
+  margin-bottom: 60px;
+
+}
+
+.swiper {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-height: 450px;
+  padding-bottom: 80px;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  color: #00bbff;
+  font-size: 30px;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  border-radius: 0;
+  border: 2px solid #bb8c5f;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #bb8c5f;
+}
+
+/* ===============ABOUTU================= */
+
+.oglav {
+  text-align: center;
+  font-size: 38px;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+.text {
+  margin: 0 auto;
+  font-size: 24px;
+  padding-bottom: 360px;
+  line-height: 1.5;
+}
+
+.pizdataya {
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* ================LOVEUFOR============== */
+
+.love__heading {
+  text-align: center;
+  font-size: 38px;
+  padding-top: 80px;
+  margin-bottom: 30px;
+}
+
+.facts {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.kuiz {
+  margin-bottom: 30px;
+}
+
+/* ================MODAL============= */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#quizForm {
+  padding-bottom: 200px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 15px;
+  border: 3px solid #ff0000;
+  max-width: 80%;
+  font-size: 30px;
+  overflow-y: auto;
+  max-height: 70%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.answer {
+  font-size: 26px;
+}
+
+.forma {
+  border: 1px ridge #00bbff;
+  padding: 5px;
+  font-size: 30px;
+  overflow-y: auto;
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.baton {
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.center {
+  font-size: 80px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* ==============MEDIA============== */
+
+@media screen and (max-width: 901px) {
+  .header__img {
+    display: none;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .header__love {
+    display: none;
+  }
+
+  .intro__inner {
+    display: block;
+  }
+
+  .intro__heading {
+    margin-bottom: 30px;
+  }
+
+  .intro__img {
+    width: 90%;
+  }
+
+  .pervi__block {
+    display: block;
+  }
+
+  .pervi__block img {
+    max-width: 100%;
+  }
+}
